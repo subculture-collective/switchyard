@@ -90,7 +90,7 @@ References:
 Switchyard runs as a Docker Compose stack on one Linux host. All external runtime and Dockerfile base images are anonymously pullable public images; the API, web, verifier and OpenCode images are built locally. Install Docker Compose system-wide, normally at `/usr/libexec/docker/cli-plugins/docker-compose`.
 
 1. Copy `.env.example` to `.env` and fill it in. Use `OPENCODE_SECURITY_MODE=strict`, long random tokens, an HTTPS `SWITCHYARD_PUBLIC_URL`, and a dedicated Git workspace outside this repository for `OPENCODE_WORKSPACE`.
-2. Check the file: `make production-config-check` (or `python3 scripts/validate_production_config.py --env-file .env`).
+2. Check the file: `python3 scripts/validate_production_config.py --env-file .env`. `make production-config-check` validates the values exported in your shell instead, so export the same values first if you use it.
 3. Install the host firewall gate and the systemd unit: `sudo ./deploy/install-web-gate.sh`, then `sudo ./deploy/install-systemd.sh`. After pulling new code, `sudo systemctl reload switchyard` validates `.env` again and rebuilds the stack.
 4. Put the dashboard behind an authenticating reverse proxy and keep the control API and PostgreSQL bound to loopback.
 
