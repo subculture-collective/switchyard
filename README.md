@@ -110,7 +110,7 @@ docs/      references, OpenAPI specs, architecture decisions and brand assets
 
 ## Contributing
 
-Open pull requests on GitHub against `main`. Read [CONTRIBUTING.md](CONTRIBUTING.md) first. CI runs `make verify` (formatting, lint, Go and web tests, builds, Compose and documentation checks) and builds the frontend image on every pull request. Report security issues as described in [SECURITY.md](SECURITY.md).
+Report bugs and request features in [GitHub issues](https://github.com/subculture-collective/switchyard/issues). Ask questions and share ideas in [GitHub Discussions](https://github.com/subculture-collective/switchyard/discussions). Open pull requests on GitHub against `main`; read [CONTRIBUTING.md](CONTRIBUTING.md) first. CI runs `make verify` (formatting, lint, Go and web tests, builds, Compose and documentation checks) and builds the frontend image on every pull request. Report security issues as described in [SECURITY.md](SECURITY.md).
 
 ## License
 
